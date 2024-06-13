@@ -1,0 +1,10 @@
+Which component is used to compile debug and execute the java programs?,JRE,JIT,JDK,JVM,c,JDK
+What is the extension of compiled java classes?,.txt,.class,.js,.java,b,.class
+Which of these are selection statements in Java?,break,for(),continue,if(),d,if()
+It is good practice to write 2 statements in a same line separated by ; to make the code compact,TRUE,FALSE,,,b,FALSE
+All Assumptions are static methods in org.junit.jupiter.Assumptions,TRUE,FALSE,,,a,TRUE
+Which of the following are test engines ? (Select multiple),junit-jupiter,junit-vintage,junit-oracle,junit-eclipse,a&b,junit-jupiter and junit-vintage
+Which of the following is not a Java features?,Dynamic,Architecture Neutral,Use of pointers,Object-oriented,c,Use of pointers
+What is the return type of the hashCode() method in the Object class?,Object,int,long,void,b,int
+What does the expression float a = 35 / 0 return?,0,Not a Number,Infinity,Run time exception,c,Infinity
+Which of the following tool is used to generate API documentation in HTML format from doc comments in source code?,javap tool,javaw command,Javadoc tool,javah command,c,Javadoc tool

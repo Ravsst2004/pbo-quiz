@@ -1,0 +1,10 @@
+CSS stands for,Cascade style sheets,Color and style sheets,Cascading style sheets,None of the above,c,Cascading style sheets
+Which line of code is a must to write to apply CSS Flexbox properties?,display: flex;,display: flexbox;,display: block;,flex-direction: row;,a,display: flex;
+The property in CSS used to change the background color of an element is ,bgcolor,color,background-color,All of the above,c,background-color
+We can give space between unit and value when assigning length values to CSS properties.,TRUE,FALSE,,,b,FALSE
+The CSS property used to control the element's font-size is,text-style,text-size,font-size,None of the above,c,font-size
+Which of the following properties specify the width of the borders? (Select multiple),border-width,border-style,border,None of the above,a&c,border-width and border
+External stylesheets are stored in CSS files,TRUE,FALSE,,,a,TRUE
+Which of the following CSS property is used to set the background image of an element?,background-attachment,background-image,background-color,None of the above,b,background-image
+Which of the following property is used as the shorthand property for the padding properties?,padding-left,padding-right,padding,All of the above,c,padding
+The CSS property used to make the text bold is,font-weight : bold,weight: bold,font: bold,style: bold,a,font-weight : bold

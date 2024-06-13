@@ -1,0 +1,10 @@
+HTML stands for,HighText Machine Language,HyperText and links Markup Language,HyperText Markup Language,None of these,c,HyperText Markup Language
+Which of the following element is responsible for making the text bold in HTML?,<pre>,<a>,<b>,<br>,c,<b>
+Which of the following tag is used for inserting the largest heading in HTML?,<h3>,<h1>,<h5>,<h6>,b,<h1>
+Which of the following tag is used to insert a line-break in HTML?,<br>,<a>,<pre>,<b>,a,<br>
+Which is the correct syntax to include comment in an HTML document?,//,/* Comment */,// Comment //,<!-- Comment -->,d,<!-- Comment -->
+Can we hide content using the comment?,Yes,No,,,a,Yes
+HTML tags with no content are called,Special tags,Advanced tags,Empty tags,Other tags,c,Empty tags
+Which is the correct HTML statement to define the red color of the paragraph text? (Select multiple),"<p style=""color: #ff0000;"">","<p style=""color: red;"">","<p style=""color red;"">",None of the above,a&b,Both A. and B.
+Nested HTML Elements are allowed in HTML?,Yes,No,,,a,Yes
+Each table cell is defined by a __ tag,<cell> ... </cell>,<tr> ... </tr>,<th> ... </th>,<td> ... </td>,d,<td> ... </td>
