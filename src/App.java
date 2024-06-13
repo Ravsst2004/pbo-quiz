@@ -1,28 +1,22 @@
+import java.util.ArrayList;
 import java.util.List;
 
-import Read.CSVReader;
+import ReadFile.CSVreader;
 import Write.Write;
 
 public class App {
+    static List<String[]> dataList = new ArrayList<>();
+
     public static void main(String[] args) {
         // Write write = new Write();
         // write.tulisSoal();
         // write.writeCSV("CsvFile/quiz_data.csv");
 
-        CSVReader CSVreader = new CSVReader();
-        List<String[]> data = CSVreader.readCSV("CsvFile/question.csv");
-        int questionNumber = 1;
-        char optionLetter = 'A';
-
-        for (String[] questionData : data) {
-            System.out.println(questionNumber + ". " + questionData[0]);
-            for (int i = 1; i < questionData.length - 1; i++) {
-                System.out.println("    " + optionLetter + ". " + questionData[i]);
-                optionLetter++;
+        dataList = CSVreader.readFile("CsvFile/question.csv");
+        for (String[] datas : dataList) {
+            for (String data : datas) {
+                System.out.println(data);
             }
-            optionLetter = 'A';
-            questionNumber++;
         }
-
     }
 }
