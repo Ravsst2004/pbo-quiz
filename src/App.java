@@ -1,10 +1,9 @@
+import Write.Write;
+
 public class App {
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-        System.out.println("Hello, World!");
-        System.out.println("Hello, World!");
-        System.out.println("Hello, World!");
-        System.out.println("Hello, World!");
-        System.out.println(20);
+    public static void main(String[] args) {
+        Write write = new Write();
+        write.tulisSoal();
+        write.writeCSV("quiz_data.csv");
     }
 }
