@@ -15,8 +15,7 @@ public class ReadCSV {
       reader = new BufferedReader(new FileReader(filePath));
       String line;
       while ((line = reader.readLine()) != null) {
-        String[] datas = line.split(",");
-        dataList.add(datas);
+        dataList.add(line.split(","));
       }
     } catch (IOException e) {
       e.printStackTrace();
