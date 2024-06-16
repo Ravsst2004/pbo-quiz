@@ -1,9 +1,6 @@
 package Class;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-
-import Class.Question;
 
 public class MultipleQuestion extends Question {
   private ArrayList<String> options;

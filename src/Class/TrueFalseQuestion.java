@@ -1,7 +1,5 @@
 package Class;
 
-import Class.Question;
-
 public class TrueFalseQuestion extends Question {
   private boolean correctAnswer;
 
