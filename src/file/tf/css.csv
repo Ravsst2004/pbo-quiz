@@ -1,0 +1,10 @@
+TF,Properti CSS "color" digunakan untuk mengatur warna teks.,True
+TF,Class selector di CSS ditandai dengan tanda "#" sebelum nama kelas.,False
+TF,Nilai CSS "auto" digunakan untuk memberikan ukuran elemen secara otomatis.,True
+TF,CSS Flexbox adalah model tata letak yang dirancang untuk tata letak vertikal.,False
+TF,Padding adalah jarak antara batas elemen dan isi di dalamnya.,True
+TF,Pseudoelemen CSS "::before" digunakan untuk menambahkan konten sebelum elemen tertentu.,True
+TF,Properti "text-align: center" digunakan untuk membuat teks menjadi rata kiri.,False
+TF,Media query digunakan untuk menentukan gaya CSS yang berbeda berdasarkan resolusi layar.,True
+TF,Float CSS digunakan untuk membuat elemen mengapung ke kanan atau ke kiri.,True
+TF,Box model CSS terdiri dari margin, padding, border, dan content.,True

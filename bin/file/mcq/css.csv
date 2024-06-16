@@ -1,0 +1,10 @@
+MCQ,Apa yang dimaksud dengan CSS?,Cascading Style Sheets,Cascading Script Sheets,Cascading Style Scripts,Computer Style Sheets,Cascading Style Sheets
+MCQ,Mana yang bukan merupakan properti CSS?,Font-size,Background-color,Text-align,Looping,Looping
+MCQ,Selector mana yang digunakan untuk memilih semua elemen?,*,#,.,%,-,* (asterisk)
+MCQ,Properti CSS mana yang digunakan untuk mengatur warna teks?,color,background-color,text-color,font-color,color
+MCQ,Apa yang dimaksud dengan CSS Flexbox?,Sebuah model tata letak yang fleksibel,Sebuah animasi CSS,Sebuah tipe elemen HTML,Sebuah media query,Sebuah model tata letak yang fleksibel
+MCQ,Mana yang bukan merupakan jenis nilai CSS?,String,Number,Boolean,Color,Boolean
+MCQ,Pada CSS, apa yang dimaksud dengan "padding"?,Jarak antara batas kotak dan elemen di dalamnya,Jarak antara elemen dan tepi layar,Jarak antara elemen satu dengan elemen lainnya,Jarak antara elemen dan background,Jarak antara batas kotak dan elemen di dalamnya
+MCQ,Selector CSS mana yang memilih elemen berdasarkan nama kelas?,.classname,#id,tagname,*,.classname
+MCQ,Manakah yang merupakan properti CSS untuk mengatur jarak antara garis paragraf?,Margin,Padding,Spacing,Indentation,Margin
+MCQ,Apa yang dimaksud dengan "box model" pada CSS?,Model yang mendefinisikan bagaimana elemen HTML diposisikan dan diatur,Model yang mendefinisikan bagaimana elemen HTML berperilaku saat digulir,Model yang mendefinisikan bagaimana elemen HTML ditampilkan dalam kotak,Model yang mendefinisikan bagaimana elemen HTML berinteraksi dengan pengguna,Model yang mendefinisikan bagaimana elemen HTML ditampilkan dalam kotak
