@@ -5,7 +5,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import Class.*;
-
+import Write.Write;
+  
 public class App {
     private static ArrayList<Question> questions = new ArrayList<Question>();
     private static Scanner userInput = new Scanner(System.in);
@@ -16,13 +17,14 @@ public class App {
             System.out.println("1. Multiple Choice Quiz");
             System.out.println("2. True/False Quiz");
             System.out.println("3. Exit");
+            System.out.println("4. Tulis Soal");
             System.out.print("Choose an option: ");
             int option = userInput.nextInt();
             userInput.nextLine();
 
             switch (option) {
                 case 1:
-                    readCsvFile("file/mcq/css.csv");
+                    readCsvFile("./mcq.csv");
                     runQuiz();
                     break;
                 case 2:
@@ -33,6 +35,9 @@ public class App {
                     System.exit(0);
                     break;
                 default:
+                    break;
+                case 4:
+                    writeCsvFile();
                     break;
             }
         } while (true);
@@ -106,5 +111,12 @@ public class App {
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
+    }
+
+    public static void writeCsvFile() {
+
+        Write write = new Write();
+        write.tulisSoal();
+        write.writeCSV();
     }
 }

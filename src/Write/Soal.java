@@ -1,5 +1,7 @@
 package Write;
 
+import java.util.List;
+
 public class Soal {
     private String pertanyaan;
     private String optionA;
@@ -15,6 +17,10 @@ public class Soal {
         this.optionC = optionC;
         this.optionD = optionD;
         this.jawabanBenar = jawabanBenar;
+    }
+
+    public Soal(String soal, List<String> options, String jawabanBenar2) {
+        //TODO Auto-generated constructor stub
     }
 
     public String getPertanyaan() {
