@@ -10,8 +10,8 @@ import Write.Write;
 public class App {
     private static ArrayList<Question> questions = new ArrayList<Question>();
     private static Scanner userInput = new Scanner(System.in);
-    private final static String MCQ_FILE_PATH = "file/mcq/";
-    private final static String TF_FILE_PATH = "file/tf/";
+    private final static String MCQ_FILE_PATH = "file/MCQ/";
+    private final static String TF_FILE_PATH = "file/TF/";
 
     public static void main(String[] args) {
         boolean running = true;
@@ -174,6 +174,5 @@ public class App {
     public static void writeCsvFile() {
         Write write = new Write();
         write.tulisSoal();
-        write.writeCSV();
     }
 }
