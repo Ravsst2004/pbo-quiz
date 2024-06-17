@@ -2,11 +2,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
-
 import Class.*;
 import Write.Write;
 
@@ -16,7 +13,7 @@ public class App {
     private final static String MCQ_FILE_PATH = "file/mcq/";
     private final static String TF_FILE_PATH = "file/tf/";
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         boolean running = true;
         while (running) {
             System.out.println("\nQuiz System");
@@ -26,20 +23,17 @@ public class App {
             System.out.println("4. Exit");
             System.out.print("Choose an option: ");
 
-
             if (userInput.hasNextLine()) {
-                String input = userInput.nextLine().trim(); // Use nextLine to read the input as a string
+                String input = userInput.nextLine().trim();
                 try {
                     int option = Integer.parseInt(input);
 
                     switch (option) {
                         case 1:
                             chooseFile(MCQ_FILE_PATH);
-                            runQuiz();
                             break;
                         case 2:
                             chooseFile(TF_FILE_PATH);
-                            runQuiz();
                             break;
                         case 3:
                             writeCsvFile();
@@ -53,9 +47,11 @@ public class App {
                     }
                 } catch (NumberFormatException e) {
                     System.out.println("Invalid input. Please enter a number.");
+                } catch (FileNotFoundException e) {
+                    System.out.println("File not found: " + e.getMessage());
                 }
             } else {
-                System.out.println("No more input available, Please restart.");
+                System.out.println("No more input available. Please restart.");
                 running = false;
             }
         }
@@ -64,41 +60,35 @@ public class App {
 
     public static void chooseFile(String filepath) throws FileNotFoundException {
         String[] files = getFileFromFolder(filepath);
-        if (files == null) {
+        if (files == null || files.length == 0) {
             System.out.println("No files found in " + filepath);
             return;
         }
 
-        if (files.length > 0 && files != null) {
-            int number = 1;
-            for (String file : files) {
-                System.out.println(number + ". " + file);
-                number++;
-            }
-
-            try {
-                System.out.println("Choose a file: ");
-                int choice = userInput.nextInt();
-                userInput.nextLine();
-
-                if (choice > 0 && choice <= files.length) {
-                    String filePath = files[choice - 1];
-                    System.out.println(filePath);
-                    readCsvFile(filePath);
-                    runQuiz();
-                } else {
-                    System.out.println("Invalid number");
-                    return;
-                }
-            } catch (Exception e) {
-                System.out.println("Error: " + e.getMessage());
-            }
-
-        } else {
-            System.out.println("No files found in " + filepath);
-            return;
+        System.out.println("\nSOAL: ");
+        int number = 1;
+        for (String file : files) {
+            System.out.println(number + ". " + file);
+            number++;
         }
 
+        try {
+            System.out.print("Choose a file: ");
+            String input = userInput.nextLine().trim();
+            int choice = Integer.parseInt(input);
+
+            if (choice > 0 && choice <= files.length) {
+                String filePath = files[choice - 1];
+                readCsvFile(filePath);
+                runQuiz();
+            } else {
+                System.out.println("Invalid number. Please choose a valid file number.");
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter a number.");
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found: " + e.getMessage());
+        }
     }
 
     public static String[] getFileFromFolder(String filepath) {
@@ -130,13 +120,13 @@ public class App {
 
                 if (question instanceof MultipleQuestion) {
                     if (!answer.matches("[ABCD]")) {
-                        System.out.println("Invalid answer. Please enter A, B, C, or D.");
+                        System.out.println("Invalid answer. Please enter A, B, C, or D.\n");
                     } else {
                         if (question.checkAnswer(answer)) {
-                            System.out.println("Correct!");
+                            System.out.println("Correct!\n");
                             score++;
                         } else {
-                            System.out.println("Wrong!");
+                            System.out.println("Wrong!\n");
                         }
                         break;
                     }
@@ -145,10 +135,10 @@ public class App {
                         System.out.println("Invalid answer. Please enter A or B.");
                     } else {
                         if (question.checkAnswer(answer)) {
-                            System.out.println("Correct!");
+                            System.out.println("Correct!\n");
                             score++;
                         } else {
-                            System.out.println("Wrong!");
+                            System.out.println("Wrong!\n");
                         }
                         break;
                     }
@@ -160,9 +150,7 @@ public class App {
     }
 
     public static void readCsvFile(String filepath) throws FileNotFoundException {
-        BufferedReader br = new BufferedReader(new FileReader(filepath));
-
-        try {
+        try (BufferedReader br = new BufferedReader(new FileReader(filepath))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] datas = line.split(",");
@@ -178,9 +166,8 @@ public class App {
                     questions.add(new TrueFalseQuestion(datas[1], correctAnswer));
                 }
             }
-            System.out.println("Quiz loaded successfully!");
         } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
+            System.out.println("Error reading file: " + e.getMessage());
         }
     }
 
