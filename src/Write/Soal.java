@@ -1,49 +1,48 @@
 package Write;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class Soal {
-    private String pertanyaan;
-    private String optionA;
-    private String optionB;
-    private String optionC;
-    private String optionD;
+class Soal {
+    private String tipeSoal;
+    private String soal;
+    private List<String> options;
     private String jawabanBenar;
-    
-    public Soal(String pertanyaan, String optionA, String optionB, String optionC, String optionD, String jawabanBenar) {
-        this.pertanyaan = pertanyaan;
-        this.optionA = optionA;
-        this.optionB = optionB;
-        this.optionC = optionC;
-        this.optionD = optionD;
+    private boolean isTrueFalse;
+
+    public Soal(String tipeSoal, String soal, List<String> options, String jawabanBenar) {
+        this.tipeSoal = tipeSoal;
+        this.soal = soal;
+        this.options = options;
         this.jawabanBenar = jawabanBenar;
+        this.isTrueFalse = false;
     }
 
-    public Soal(String soal, List<String> options, String jawabanBenar2) {
-        //TODO Auto-generated constructor stub
+    public Soal(String tipeSoal, String soal, boolean isTrueFalse) {
+        this.tipeSoal = tipeSoal;
+        this.soal = soal;
+        this.options = new ArrayList<>();
+        this.jawabanBenar = isTrueFalse ? "TRUE" : "FALSE";
+        this.isTrueFalse = isTrueFalse;
     }
 
-    public String getPertanyaan() {
-        return pertanyaan;
+    public String getTipeSoal() {
+        return tipeSoal;
     }
 
-    public String getOptionA() {
-        return optionA;
+    public String getSoal() {
+        return soal;
     }
 
-    public String getOptionB() {
-        return optionB;
-    }
-
-    public String getOptionC() {
-        return optionC;
-    }
-
-    public String getOptionD() {
-        return optionD;
+    public List<String> getOptions() {
+        return options;
     }
 
     public String getJawabanBenar() {
         return jawabanBenar;
+    }
+
+    public boolean isTrueFalse() {
+        return isTrueFalse;
     }
 }

@@ -17,35 +17,49 @@ public class App {
     private final static String TF_FILE_PATH = "file/tf/";
 
     public static void main(String[] args) throws Exception {
-        do {
+        boolean running = true;
+        while (running) {
             System.out.println("\nQuiz System");
             System.out.println("1. Multiple Choice Quiz");
             System.out.println("2. True/False Quiz");
-            System.out.println("3. Exit");
-            System.out.println("4. Tulis Soal");
+            System.out.println("3. Tulis Soal");
+            System.out.println("4. Exit");
             System.out.print("Choose an option: ");
-            int option = userInput.nextInt();
-            userInput.nextLine();
 
-            switch (option) {
-                case 1:
-                    chooseFile(MCQ_FILE_PATH);
-                    runQuiz();
-                    break;
-                case 2:
-                    chooseFile(TF_FILE_PATH);
-                    runQuiz();
-                    break;
-                case 3:
-                    System.exit(0);
-                    break;
-                default:
-                    break;
-                case 4:
-                    writeCsvFile();
-                    break;
+            // Checking if there is a next line
+            if (userInput.hasNextLine()) {
+                String input = userInput.nextLine().trim(); // Use nextLine to read the input as a string
+                try {
+                    int option = Integer.parseInt(input);
+
+                    switch (option) {
+                        case 1:
+                            chooseFile(MCQ_FILE_PATH);
+                            runQuiz();
+                            break;
+                        case 2:
+                            chooseFile(TF_FILE_PATH);
+                            runQuiz();
+                            break;
+                        case 3:
+                            writeCsvFile();
+                            break;
+                        case 4:
+                            System.out.println("Exiting the program...");
+                            running = false;
+                            break;
+                        default:
+                            System.out.println("Invalid choice. Please try again.");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input. Please enter a number.");
+                }
+            } else {
+                System.out.println("No more input available, Please restart.");
+                running = false;
             }
-        } while (true);
+        }
+        userInput.close(); // Close the scanner here, when we're completely done
     }
 
     public static void chooseFile(String filepath) throws FileNotFoundException {
@@ -140,7 +154,6 @@ public class App {
                     }
                 }
             } while (true);
-
         }
         System.out.println("Your score: " + score);
         questions.clear();
@@ -172,7 +185,6 @@ public class App {
     }
 
     public static void writeCsvFile() {
-
         Write write = new Write();
         write.tulisSoal();
         write.writeCSV();
