@@ -26,29 +26,37 @@ public class App {
             System.out.println("4. Exit");
             System.out.print("Choose an option: ");
 
-            String input = userInput.nextLine().trim();
-            try {
-                int option = Integer.parseInt(input);
 
-                switch (option) {
-                    case 1:
-                        chooseFile(MCQ_FILE_PATH);
-                        break;
-                    case 2:
-                        chooseFile(TF_FILE_PATH);
-                        break;
-                    case 3:
-                        writeCsvFile();
-                        break;
-                    case 4:
-                        System.out.println("Exiting the program...");
-                        running = false;
-                        break;
-                    default:
-                        System.out.println("Invalid choice. Please try again.");
+            if (userInput.hasNextLine()) {
+                String input = userInput.nextLine().trim(); // Use nextLine to read the input as a string
+                try {
+                    int option = Integer.parseInt(input);
+
+                    switch (option) {
+                        case 1:
+                            chooseFile(MCQ_FILE_PATH);
+                            runQuiz();
+                            break;
+                        case 2:
+                            chooseFile(TF_FILE_PATH);
+                            runQuiz();
+                            break;
+                        case 3:
+                            writeCsvFile();
+                            break;
+                        case 4:
+                            System.out.println("Exiting the program...");
+                            running = false;
+                            break;
+                        default:
+                            System.out.println("Invalid choice. Please try again.");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input. Please enter a number.");
                 }
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter a number.");
+            } else {
+                System.out.println("No more input available, Please restart.");
+                running = false;
             }
         }
         userInput.close();
