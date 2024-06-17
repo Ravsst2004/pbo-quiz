@@ -12,7 +12,7 @@ public class Write {
     private List<Soal> soalList = new ArrayList<>();
     private String namaSoal;
     private String tipeSoal;
-    private int tSoal = 1;
+    private int tSoal = 10;
 
     public Write() {
         soalList = new ArrayList<>();
