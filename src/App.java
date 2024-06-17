@@ -8,40 +8,42 @@ import Class.*;
 import Write.Write;
   
 public class App {
-    private static ArrayList<Question> questions = new ArrayList<Question>();
-    private static Scanner userInput = new Scanner(System.in);
+    private static final ArrayList <Question> questions = new ArrayList<>();
+    private static final Scanner userInput = new Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
-        do {
+     while (true) {
             System.out.println("\nQuiz System");
             System.out.println("1. Multiple Choice Quiz");
             System.out.println("2. True/False Quiz");
-            System.out.println("3. Exit");
-            System.out.println("4. Tulis Soal");
+            System.out.println("3. Tulis Soal");
+            System.out.println("4. Exit");
             System.out.print("Choose an option: ");
-            int option = userInput.nextInt();
-            userInput.nextLine();
 
-            switch (option) {
-                case 1:
-                    readCsvFile("./mcq.csv");
-                    runQuiz();
-                    break;
-                case 2:
-                    readCsvFile("file/tf/css.csv");
-                    runQuiz();
-                    break;
-                case 3:
-                    System.exit(0);
-                    break;
-                default:
-                    break;
-                case 4:
-                    writeCsvFile();
-                    break;
+                int option = userInput.nextInt();
+                userInput.nextLine();
+                
+                switch (option) {
+                    case 1:
+                        readCsvFile("file/MCQ/css.csv");
+                        runQuiz();
+                        break;
+                    case 2:
+                        readCsvFile("file/tf/css.csv");
+                        runQuiz();
+                        break;
+                    case 3:
+                        writeCsvFile();
+                        break;
+                    case 4:
+                        System.out.println("Exiting the program...");
+                        userInput.close();
+                        return;
+                    default:
+                        System.out.println("Invalid choice. Please try again.");
+                }
             }
-        } while (true);
-    }
+        }
 
     public static void runQuiz() {
         if (questions.isEmpty()) {
