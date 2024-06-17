@@ -1,10 +1,10 @@
-MCQ,Apa yang dimaksud dengan CSS?,Cascading Style Sheets,Cascading Script Sheets,Cascading Style Scripts,Computer Style Sheets,Cascading Style Sheets
-MCQ,Mana yang bukan merupakan properti CSS?,Font-size,Background-color,Text-align,Looping,Looping
-MCQ,Selector mana yang digunakan untuk memilih semua elemen?,*,#,.,%,-,* (asterisk)
-MCQ,Properti CSS mana yang digunakan untuk mengatur warna teks?,color,background-color,text-color,font-color,color
-MCQ,Apa yang dimaksud dengan CSS Flexbox?,Sebuah model tata letak yang fleksibel,Sebuah animasi CSS,Sebuah tipe elemen HTML,Sebuah media query,Sebuah model tata letak yang fleksibel
-MCQ,Mana yang bukan merupakan jenis nilai CSS?,String,Number,Boolean,Color,Boolean
-MCQ,Pada CSS, apa yang dimaksud dengan "padding"?,Jarak antara batas kotak dan elemen di dalamnya,Jarak antara elemen dan tepi layar,Jarak antara elemen satu dengan elemen lainnya,Jarak antara elemen dan background,Jarak antara batas kotak dan elemen di dalamnya
-MCQ,Selector CSS mana yang memilih elemen berdasarkan nama kelas?,.classname,#id,tagname,*,.classname
-MCQ,Manakah yang merupakan properti CSS untuk mengatur jarak antara garis paragraf?,Margin,Padding,Spacing,Indentation,Margin
-MCQ,Apa yang dimaksud dengan "box model" pada CSS?,Model yang mendefinisikan bagaimana elemen HTML diposisikan dan diatur,Model yang mendefinisikan bagaimana elemen HTML berperilaku saat digulir,Model yang mendefinisikan bagaimana elemen HTML ditampilkan dalam kotak,Model yang mendefinisikan bagaimana elemen HTML berinteraksi dengan pengguna,Model yang mendefinisikan bagaimana elemen HTML ditampilkan dalam kotak
+MCQ,Apa singkatan dari CSS?,Cascading Style Sheets,Cascading Style Script,Cascading Style Symbols,Cascading Style Structures,A
+MCQ,"Apa fungsi utama dari CSS?",Mengatur tata letak halaman web,Mengelola server,Membuat animasi,Menjalankan JavaScript,A
+MCQ,"Bagaimana cara menambahkan CSS ke dalam halaman HTML?",Inline,Internal,External,Inline dan External,C
+MCQ,"CSS adalah bahasa pemrograman?",Ya,Tidak,Itu tergantung,Belum ada keputusan resmi,B
+MCQ,"Apa yang dimaksud dengan selector dalam CSS?",Elemen yang diambil untuk diubah warnanya,Elemen yang diambil untuk diubah tata letaknya,Elemen yang diambil untuk diubah propertinya,Elemen yang diambil untuk diubah fontnya,C
+MCQ,"Apa yang dimaksud dengan 'box model' dalam CSS?",Model yang menggambarkan struktur layout halaman web,Model yang menggambarkan komunikasi antara elemen dan server,Model yang menggambarkan alur eksekusi JavaScript,Model yang menggambarkan animasi elemen halaman web,A
+MCQ,"Apa perbedaan antara padding dan margin dalam CSS?",Padding digunakan untuk mengatur jarak antara isi elemen dengan batasnya sendiri, Margin digunakan untuk mengatur jarak antara elemen dengan elemen lain di sekitarnya,Padding digunakan untuk mengatur jarak antara elemen dengan elemen lain di sekitarnya, Margin digunakan untuk mengatur jarak antara isi elemen dengan batasnya sendiri,A
+MCQ,"Bagaimana cara membuat komentar dalam CSS?",/* Ini adalah komentar */,// Ini adalah komentar,<!-- Ini adalah komentar -->,/* Ini adalah komentar */,A
+MCQ,"Apa arti dari 'CSS specificity'?",Kemampuan CSS untuk mempengaruhi elemen secara spesifik,Kemampuan CSS untuk menghasilkan animasi,Kemampuan CSS untuk membuat halaman web responsif,Kemampuan CSS untuk menerapkan berbagai efek visual,A
+MCQ,"Apa fungsi dari 'media queries' dalam CSS?",Mengubah warna latar belakang halaman,Mengatur tata letak halaman web berdasarkan ukuran layar perangkat pengguna,Membuat elemen bergerak,Melakukan validasi input form,B

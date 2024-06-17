@@ -9,14 +9,15 @@ public class MultipleQuestion extends Question {
   public MultipleQuestion(String question, ArrayList<String> options, String correctAnswer) {
     super(question);
     this.options = options;
-    this.correctAnswer = correctAnswer;
+    this.correctAnswer = correctAnswer.toLowerCase();
   }
 
   @Override
   public boolean checkAnswer(String answer) {
-    answer = answer.toUpperCase();
-    int answerIndex = answer.charAt(0) - 'A';
-    return answerIndex == options.indexOf(correctAnswer);
+    answer = answer.toLowerCase();
+    // int answerIndex = answer.charAt(0) - 'A';
+    // return answerIndex == options.indexOf(correctAnswer);
+    return answer.equals(correctAnswer);
   }
 
   @Override

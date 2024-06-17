@@ -1,1 +1,10 @@
-null,null,null,null,null,null
+MCQ,"Apa singkatan dari HTML?",Hyper Text Markup Language,Hyperlinks and Text Markup Language,Home Tool Markup Language,Hyperlinks and Text Markup Layer,A
+MCQ,"Apa fungsi utama dari tag <head> dalam HTML?",Menyimpan konten utama halaman web,Mendefinisikan tata letak halaman web,Mendefinisikan informasi yang terkait dengan halaman web,Menampilkan isi halaman web,A
+MCQ,"Bagaimana cara membuat hyperlink dalam HTML?",<a href="url">Link text</a>,<link href="url" />,<a>Link text</a>,<a href="#">Link text</a>,A
+MCQ,"Berikut ini adalah tag yang digunakan untuk membuat paragraf dalam HTML, kecuali:",<p>,<paragraph>,<div>,<span>,B
+MCQ,"Apa yang dimaksud dengan tag semantik dalam HTML?",Tag yang memberi tahu browser bagaimana menampilkan teks,Tag yang memiliki arti dan makna tertentu dalam halaman web,Tag yang digunakan untuk memperindah tampilan halaman web,Tag yang hanya digunakan untuk styling halaman web,B
+MCQ,"Apa yang dimaksud dengan atribut 'href' dalam tag <a>?",Menentukan warna link, Menentukan alamat URL yang dituju oleh link, Menentukan tampilan link, Menentukan tinggi dan lebar link,B
+MCQ,"Apa yang dimaksud dengan atribut 'alt' dalam tag <img>?",Menentukan ukuran gambar, Menentukan sumber gambar, Menentukan deskripsi gambar, Menentukan warna latar belakang gambar,C
+MCQ,"Berikut ini adalah tag yang digunakan untuk membuat judul dalam HTML, kecuali:",<h1>,<header>,<h2>,<h3>,B
+MCQ,"Apa yang dimaksud dengan 'doctype' dalam HTML?",Dokumen HTML, Instruksi untuk browser, Versi HTML yang digunakan dalam halaman, Instruksi untuk validator HTML,C
+MCQ,"Apa yang dimaksud dengan tag <footer> dalam HTML?",Menentukan tata letak footer halaman web, Menandakan akhir halaman web, Menampilkan informasi penting, Menampilkan tautan ke halaman lain,B

@@ -1,0 +1,10 @@
+MCQ,"Apa singkatan dari PHP?",Personal Home Page,Preprocessor Hypertext,PHP: Hypertext Preprocessor,Preformatted Hypertext Processor,C
+MCQ,"Apa yang menjadi kegunaan utama dari PHP?",Mengatur tata letak halaman web,Mengelola basis data,Mengirim email,Membuat animasi,B
+MCQ,"Berikut ini adalah tipe data yang tidak didukung oleh PHP, kecuali:",Boolean,String,Float,Integer,D
+MCQ,"Apa yang dimaksud dengan 'variabel global' dalam PHP?",Variabel yang hanya dapat diakses di dalam fungsi tertentu,Variabel yang dapat diakses dari mana saja di dalam skrip PHP,Variabel yang hanya dapat diakses di luar fungsi,Variabel yang hanya dapat diakses di dalam kelas tertentu,B
+MCQ,"Apa yang dimaksud dengan 'echo' dalam PHP?",Menampilkan teks ke layar,Membuat perulangan,Memeriksa kondisi,Memberi nilai variabel,A
+MCQ,"Apa yang dimaksud dengan 'array' dalam PHP?",Tipe data yang dapat menyimpan satu nilai saja,Tipe data yang dapat menyimpan beberapa nilai sekaligus,Tipe data yang hanya dapat menyimpan bilangan bulat,Tipe data yang hanya dapat menyimpan karakter,B
+MCQ,"Berikut ini adalah operator yang digunakan untuk penugasan nilai di dalam PHP, kecuali:",=,+=,-=,*=,D
+MCQ,"Apa yang dimaksud dengan 'function' dalam PHP?",Sekumpulan pernyataan yang dapat digunakan berulang kali dalam program,Metode untuk mengubah nilai variabel,Metode untuk melakukan perbandingan,Metode untuk mengatur tata letak halaman web,A
+MCQ,"Apa yang dimaksud dengan 'include' dalam PHP?",Membuat salinan dari file yang disertakan,Menampilkan teks ke layar,Menggabungkan kode dari file eksternal ke dalam skrip PHP,Melakukan redirect ke halaman lain,C
+MCQ,"Bagaimana cara mengakses nilai dari variabel yang dikirim melalui metode GET di dalam PHP?",$_GET['nama_variabel'], $_POST['nama_variabel'], $_REQUEST['nama_variabel'], $_SESSION['nama_variabel'],A

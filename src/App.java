@@ -1,15 +1,20 @@
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 import Class.*;
 import Write.Write;
-  
+
 public class App {
     private static ArrayList<Question> questions = new ArrayList<Question>();
     private static Scanner userInput = new Scanner(System.in);
+    private final static String MCQ_FILE_PATH = "file/mcq/";
+    private final static String TF_FILE_PATH = "file/tf/";
 
     public static void main(String[] args) throws Exception {
         do {
@@ -24,11 +29,11 @@ public class App {
 
             switch (option) {
                 case 1:
-                    readCsvFile("./mcq.csv");
+                    chooseFile(MCQ_FILE_PATH);
                     runQuiz();
                     break;
                 case 2:
-                    readCsvFile("file/tf/css.csv");
+                    chooseFile(TF_FILE_PATH);
                     runQuiz();
                     break;
                 case 3:
@@ -41,6 +46,59 @@ public class App {
                     break;
             }
         } while (true);
+    }
+
+    public static void chooseFile(String filepath) throws FileNotFoundException {
+        String[] files = getFileFromFolder(filepath);
+        // System.out.println(Arrays.toString(files));
+        if (files == null) {
+            System.out.println("No files found in " + filepath);
+            return;
+        }
+
+        if (files.length > 0 && files != null) {
+            int number = 1;
+            for (String file : files) {
+                System.out.println(number + ". " + file);
+                number++;
+            }
+
+            try {
+                System.out.println("Choose a file: ");
+                int choice = userInput.nextInt();
+                userInput.nextLine();
+
+                if (choice > 0 && choice <= files.length) {
+                    String filePath = files[choice - 1];
+                    System.out.println(filePath);
+                    readCsvFile(filePath);
+                } else {
+                    System.out.println("Invalid number");
+                    return;
+                }
+            } catch (Exception e) {
+                System.out.println("Error: " + e.getMessage());
+            }
+
+        } else {
+            System.out.println("No files found in " + filepath);
+            return;
+        }
+
+    }
+
+    public static String[] getFileFromFolder(String filepath) {
+        File file = new File(filepath);
+        File[] files = file.listFiles();
+        if (files == null) {
+            System.out.println("No files found in " + filepath);
+            return null;
+        }
+        String[] fileNames = new String[files.length];
+        for (int i = 0; i < files.length; i++) {
+            fileNames[i] = files[i].getPath();
+        }
+        return fileNames;
     }
 
     public static void runQuiz() {
