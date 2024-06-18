@@ -2,10 +2,13 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
-import Class.*;
+
 import Write.Write;
+import Class.*;
 
 public class App {
     private static ArrayList<Question> questions = new ArrayList<Question>();
@@ -13,13 +16,22 @@ public class App {
     private final static String MCQ_FILE_PATH = "file/MCQ/";
     private final static String TF_FILE_PATH = "file/TF/";
 
+    private static User user;
+    private static int score = 0;
+    private static String name = "";
+
     public static void main(String[] args) {
+        System.out.println("Welcome to the Quiz System!\n");
+        System.out.print("Input your name: ");
+        name = userInput.nextLine().trim();
+        user = new User(name, score);
+
         boolean running = true;
         while (running) {
             System.out.println("\nQuiz System");
             System.out.println("1. Multiple Choice Quiz");
             System.out.println("2. True/False Quiz");
-            System.out.println("3. Tulis Soal");
+            System.out.println("3. Write Question");
             System.out.println("4. Exit");
             System.out.print("Choose an option: ");
 
@@ -65,7 +77,7 @@ public class App {
             return;
         }
 
-        System.out.println("\nSOAL: ");
+        System.out.println("\nQUIZ: ");
         int number = 1;
         for (String file : files) {
             System.out.println(number + ". " + file);
@@ -106,6 +118,7 @@ public class App {
     }
 
     public static void runQuiz() {
+
         if (questions.isEmpty()) {
             System.out.println("Quiz is empty!");
             return;
@@ -144,9 +157,10 @@ public class App {
                     }
                 }
             } while (true);
+            user.setScore(score);
         }
-        System.out.println("Your score: " + score);
-        questions.clear();
+        System.out.println("Your score: " + user.getScore());
+        // questions.clear();
     }
 
     public static void readCsvFile(String filepath) throws FileNotFoundException {

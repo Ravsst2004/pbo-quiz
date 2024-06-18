@@ -15,8 +15,6 @@ public class MultipleQuestion extends Question {
   @Override
   public boolean checkAnswer(String answer) {
     answer = answer.toLowerCase();
-    // int answerIndex = answer.charAt(0) - 'A';
-    // return answerIndex == options.indexOf(correctAnswer);
     return answer.equals(correctAnswer);
   }
 
