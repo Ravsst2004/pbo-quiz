@@ -80,7 +80,8 @@ public class App {
         System.out.println("\nQUIZ: ");
         int number = 1;
         for (String file : files) {
-            System.out.println(number + ". " + file);
+            File fileObj = new File(file);
+            System.out.println(number + ". " + fileObj.getName());
             number++;
         }
 
