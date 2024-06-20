@@ -161,7 +161,7 @@ public class App {
             user.setScore(score);
         }
         System.out.println("Your score: " + user.getScore());
-        // questions.clear();
+        questions.clear();
     }
 
     public static void readCsvFile(String filepath) throws FileNotFoundException {
