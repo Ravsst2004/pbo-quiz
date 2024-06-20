@@ -12,7 +12,7 @@ public class Write {
     private List<Soal> soalList;
     private String namaSoal;
     private String tipeSoal;
-    private int tSoal = 5;
+    private int tSoal = 0;
     private Scanner kInput;
 
     public Write() {
@@ -21,6 +21,9 @@ public class Write {
     }
 
     public void tulisSoal() {
+        System.out.println("Jumlah Soal: ");
+        this.tSoal = kInput.nextInt();
+        kInput.nextLine();
         System.out.println("Tulis Nama Soal Anda Dibawah Ini: ");
         this.namaSoal = kInput.nextLine();
         System.out.println("Pilih tipe soal (MCQ Atau TF): ");
@@ -87,7 +90,7 @@ public class Write {
 
     public void writeCSV() {
         String directoryPath = "./file/";
-        String fullPath = directoryPath +this.tipeSoal+"/"+ this.namaSoal + ".csv";
+        String fullPath = directoryPath + this.tipeSoal + "/" + this.namaSoal + ".csv";
 
         try (BufferedWriter fileWriter = new BufferedWriter(new FileWriter(fullPath))) {
             for (Soal s : soalList) {

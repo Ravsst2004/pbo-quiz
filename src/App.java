@@ -119,7 +119,6 @@ public class App {
     }
 
     public static void runQuiz() {
-
         if (questions.isEmpty()) {
             System.out.println("Quiz is empty!");
             return;
