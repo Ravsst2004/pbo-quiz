@@ -25,7 +25,7 @@ public class App {
         System.out.print("Input your name: ");
         name = userInput.nextLine().trim();
         user = new User(name, score);
-        System.out.println("Hello " + name + "!");
+        System.out.println("Hello " + user.getName() + "!");
 
         boolean running = true;
         while (running) {
